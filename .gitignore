@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# szmania
+*.log
+Take Home - Poker Problem.pdf
