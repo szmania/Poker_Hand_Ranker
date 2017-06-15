@@ -40,7 +40,6 @@ other. Example 6-6-4-3-2.
 Five cards which do not form any of the combinations listed above. Example: A-J-9-5-3.
 
 
-
 Usage
 =====
 Card Types:
