@@ -832,7 +832,7 @@ def get_args():
     args = parser.parse_args()
     return args.__dict__
 
-def setup_logger(logFile=LOG, logLevel='DEBUG'):
+def setup_logger(logFile='rankHand.log', logLevel='DEBUG'):
         """
         Logger setup.
 
