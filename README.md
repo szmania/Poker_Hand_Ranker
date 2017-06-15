@@ -71,7 +71,10 @@ Fourth card in hand, represented by a tuple. ie: A,D ("Ace of Diamonds")
 
 Fifth card in hand, represented by a tuple. ie: 2,H ("Two of Hearts")
 
-`--log <loglevel>`
+`--logFile <logging file>`
+(Optional) File to output log to. ie: "log.log". Default is "rankHand.log".
+
+`--logLevel <loglevel>`
 (Optional) Logging level. ie: "WARN", "INFO", "DEBUG"
 	
 	
