@@ -71,6 +71,7 @@ First card in hand, represented by a tuple. ie: 2,H ("Two of Hearts")
 	
 	
 ## Examples
+===========
 ### input
 `python rankHand.py --card1 A,C --card2 J,S --card3 J,C --card4 K,S --card5 K,C --log WARN`
 ### output
