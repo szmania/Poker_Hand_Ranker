@@ -10,10 +10,6 @@ from argparse import ArgumentParser
 from logging import DEBUG, getLogger, FileHandler, Formatter, StreamHandler
 from sys import stdout
 
-
-LOG = 'rankHand.log'
-
-
 class RankHand(object):
     def __init__(self, logLevel='DEBUG', **kwargs):
         self.__logLevel = logLevel
@@ -802,7 +798,6 @@ class NotSuite(Exception):
 class NotType(Exception):
     pass
 
-
 def get_args():
     """
     Get arguments from command line, and returns them as dictionary.
@@ -828,8 +823,11 @@ def get_args():
     parser.add_argument('-c5', '--card5', dest='card5', type=lambda x: x.split(','), required=True,
                         help='Card 5 given as tuple. ie: "2", "C" or "3", "S", etc...')
 
-    parser.add_argument('--log', dest='logLevel', default='INFO',
+    parser.add_argument('--logLevel', dest='logLevel', default='INFO',
                         help='Set logging level')
+
+    parser.add_argument('--logFile', dest='logFile', default='rankHand.log',
+                        help='Logging file.')
 
     args = parser.parse_args()
     return args.__dict__
@@ -864,11 +862,11 @@ def setup_logger(logFile=LOG, logLevel='DEBUG'):
         logger.debug(' Logging to %s' % logFile)
 
 def main():
+    kwargs = get_args()
 
-    setup_logger(logFile=LOG, logLevel='DEBUG')
+    setup_logger(logFile=kwargs['logFile'], logLevel=kwargs['logLevel'])
 
     # UNCOMMENT TO ALLOW COMMAND LINE ARGUMENTS
-    kwargs = get_args()
     rankObj = RankHand(**kwargs)
     rank = rankObj.get_rank()
 
