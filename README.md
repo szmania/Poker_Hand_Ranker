@@ -57,22 +57,22 @@ First card in hand, represented by a tuple. ie: 3,D ("Three of Diamonds")
 	
 `--card2 <type>,<suite>`
 
-First card in hand, represented by a tuple. ie: J,S ("Jack of Spades")
+Second card in hand, represented by a tuple. ie: J,S ("Jack of Spades")
 	
 `--card3 <type>,<suite>`
 
-First card in hand, represented by a tuple. ie: Q,C ("Queen of Clubs")
+Third card in hand, represented by a tuple. ie: Q,C ("Queen of Clubs")
 	
 `--card4 <type>,<suite>`
 
-First card in hand, represented by a tuple. ie: A,D ("Ace of Diamonds")
+Fourth card in hand, represented by a tuple. ie: A,D ("Ace of Diamonds")
 	
 `--card5 <type>,<suite>`
 
-	First card in hand, represented by a tuple. ie: 2,H ("Two of Hearts")
+Fifth card in hand, represented by a tuple. ie: 2,H ("Two of Hearts")
 
 `--log <loglevel>`
-	(Optional) Logging level. ie: "WARN", "INFO", "DEBUG"
+(Optional) Logging level. ie: "WARN", "INFO", "DEBUG"
 	
 	
 ## Examples
