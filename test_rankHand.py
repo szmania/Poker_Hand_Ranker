@@ -42,7 +42,7 @@ def test_all_ranks():
               'card5': ['J','S']
               }
     royalFlush = RankHand(logLevel='INFO', **kwargs)
-    rank = royalFlush.getRank()
+    rank = royalFlush.get_rank()
     print('Rank %d\n' % rank)
 
     print('2. Straight Flush')
@@ -53,7 +53,7 @@ def test_all_ranks():
               'card5': ['9','S']
               }
     straightFlush = RankHand(logLevel='INFO', **kwargs)
-    rank = straightFlush.getRank()
+    rank = straightFlush.get_rank()
     print('Rank %d\n' % rank)
 
     print('3. Four of a Kind')
@@ -64,7 +64,7 @@ def test_all_ranks():
               'card5': ['4','H']
               }
     fourOfAKind = RankHand(logLevel='INFO', **kwargs)
-    rank = fourOfAKind.getRank()
+    rank = fourOfAKind.get_rank()
     print('Rank %d\n' % rank)
 
     print('4. Full House')
@@ -75,7 +75,7 @@ def test_all_ranks():
               'card5': ['4','H']
               }
     fullHouse = RankHand(logLevel='INFO', **kwargs)
-    rank = fullHouse.getRank()
+    rank = fullHouse.get_rank()
     print('Rank %d\n' % rank)
 
     print('5. Flush')
@@ -86,7 +86,7 @@ def test_all_ranks():
               'card5': ['5','C']
               }
     flush = RankHand(logLevel='INFO', **kwargs)
-    rank = flush.getRank()
+    rank = flush.get_rank()
     print('Rank %d\n' % rank)
 
     print('6. Straight')
@@ -97,7 +97,7 @@ def test_all_ranks():
               'card5': ['5','C']
               }
     straight = RankHand(logLevel='INFO', **kwargs)
-    rank = straight.getRank()
+    rank = straight.get_rank()
     print('Rank %d\n' % rank)
 
     print('7. Three of a Kind')
@@ -108,7 +108,7 @@ def test_all_ranks():
               'card5': ['2','C']
               }
     threeOfAKind = RankHand(logLevel='INFO', **kwargs)
-    rank = threeOfAKind.getRank()
+    rank = threeOfAKind.get_rank()
     print('Rank %d\n' % rank)
 
     print('8. Two Pairs')
@@ -119,7 +119,7 @@ def test_all_ranks():
               'card5': ['K','C']
               }
     twoPair = RankHand(logLevel='INFO', **kwargs)
-    rank = twoPair.getRank()
+    rank = twoPair.get_rank()
     print('Rank %d\n' % rank)
 
     print('9. Pair')
@@ -130,7 +130,7 @@ def test_all_ranks():
               'card5': ['2','C']
               }
     pair = RankHand(logLevel='INFO', **kwargs)
-    rank = pair.getRank()
+    rank = pair.get_rank()
     print('Rank %d\n' % rank)
 
     print('10. High Card')
@@ -141,7 +141,7 @@ def test_all_ranks():
               'card5': ['2','C']
               }
     highCard = RankHand(logLevel='INFO', **kwargs)
-    rank = highCard.getRank()
+    rank = highCard.get_rank()
     print('Rank %d\n' % rank)
 
 
@@ -186,7 +186,7 @@ def main():
             TOTAL =  TOTAL + 1
             try:
                 rankObj = RankHand(logLevel='INFO', **kwargs)
-                rank = rankObj.getRank()
+                rank = rankObj.get_rank()
                 print('Hand: %s' % rankObj.hand.str)
                 print('Rank %d\n' % rank)
 

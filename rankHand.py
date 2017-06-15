@@ -57,7 +57,7 @@ class RankHand(object):
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-    def getRank(self):
+    def get_rank(self):
         """
         Return rank of hand as integer.
 
@@ -871,7 +871,7 @@ def main():
     # UNCOMMENT TO ALLOW COMMAND LINE ARGUMENTS
     kwargs = get_args()
     rankObj = RankHand(**kwargs)
-    rank = rankObj.getRank()
+    rank = rankObj.get_rank()
 
 
 if __name__ == "__main__":
