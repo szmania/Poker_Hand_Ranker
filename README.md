@@ -1,10 +1,9 @@
 # Poker Hand Ranker
 
-Description
-===========
+## Description
 This applicaiton takes a hand of five cards and determines its rank amongst ten different ranks, 1 being the highest.
 
-Ranks are a follows:
+### Ranks are a follows
 1. Royal Flush
 Same as a Straight Flush (below) but with Ace high. For example, heartA-heartK-heartQheartJheart10
 is a royal flush.
@@ -40,49 +39,48 @@ other. Example 6-6-4-3-2.
 Five cards which do not form any of the combinations listed above. Example: A-J-9-5-3.
 
 
-Usage
-=====
-Card Types:
+## Usage
+### Card Types
 All numbered cards are represented by their corresponding number.
 "2" = 2, "3" = 3, "7" = 7, "10" =  10 etc...
 All face cards are represented by the first letter in their name.
 "A" = Ace, "K" = King, "Q" = Queen and "J" = Jack
 
-Card Suites:
+### Card Suites
 All card suites are represented by the first letter in the suite name.
 "C" = Clubs, "D" = Diamonds, "H" = Hearts and "S" = Spades
 
---card1 <type>,<suite>
-	First card in hand, represented by a tuple. ie: 3,D ("Three of Diamonds")
+### Arguments
+'--card1 <type>,<suite>'
+First card in hand, represented by a tuple. ie: 3,D ("Three of Diamonds")
 	
---card2 <type>,<suite>
-	First card in hand, represented by a tuple. ie: J,S ("Jack of Spades")
+'--card2 <type>,<suite>'
+First card in hand, represented by a tuple. ie: J,S ("Jack of Spades")
 	
---card3 <type>,<suite>
-	First card in hand, represented by a tuple. ie: Q,C ("Queen of Clubs")
+'--card3 <type>,<suite>'
+First card in hand, represented by a tuple. ie: Q,C ("Queen of Clubs")
 	
---card4 <type>,<suite>
-	First card in hand, represented by a tuple. ie: A,D ("Ace of Diamonds")
+'--card4 <type>,<suite>'
+First card in hand, represented by a tuple. ie: A,D ("Ace of Diamonds")
 	
---card5 <type>,<suite>
-	First card in hand, represented by a tuple. ie: 2,H ("Two of Hearts")
+'--card5 <type>,<suite>'
+First card in hand, represented by a tuple. ie: 2,H ("Two of Hearts")
 
---log <loglevel>
-	(Optional) Logging level. ie: "WARN", "INFO", "DEBUG"
+'--log <loglevel>'
+(Optional) Logging level. ie: "WARN", "INFO", "DEBUG"
 	
 	
-Examples
-========
+## Examples
 input:	
-	python rankHand.py --card1 A,C --card2 J,S --card3 J,C --card4 K,S --card5 K,C --log WARN 
+	'python rankHand.py --card1 A,C --card2 J,S --card3 J,C --card4 K,S --card5 K,C --log WARN'	
 output:
-	Hand is Two Pairs.
-	Rank of hand is 8.
-	Hand: A,C - J,S - J,C - K,S - K,C
+	'Hand is Two Pairs.'
+	'Rank of hand is 8.'
+	'Hand: A,C - J,S - J,C - K,S - K,C'
 	
 input:	
-	python rankHand.py --card1 A,C --card2 J,S --card3 4,D --card4 6,S --card5 K,C
+'python rankHand.py --card1 A,C --card2 J,S --card3 4,D --card4 6,S --card5 K,C'
 output:
-	Hand is High Card.
-	Rank of hand is 10.
-	Hand: A,C - J,S - 4,D - 6,S - K,C
+'Hand is High Card.'
+'Rank of hand is 10.'
+'Hand: A,C - J,S - 4,D - 6,S - K,C'
