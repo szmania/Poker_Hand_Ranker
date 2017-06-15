@@ -72,15 +72,17 @@ Fourth card in hand, represented by a tuple. ie: A,D ("Ace of Diamonds")
 Fifth card in hand, represented by a tuple. ie: 2,H ("Two of Hearts")
 
 `--logFile <logging file>`
+
 (Optional) File to output log to. ie: "log.log". Default is "rankHand.log".
 
 `--logLevel <loglevel>`
+
 (Optional) Logging level. ie: "WARN", "INFO", "DEBUG"
 	
 	
 ## Examples
 ### input 1:
-`python rankHand.py --card1 A,C --card2 J,S --card3 J,C --card4 K,S --card5 K,C --log WARN`
+`python rankHand.py --card1 A,C --card2 J,S --card3 J,C --card4 K,S --card5 K,C --logFile log.log --logLevel WARN`
 ### output 1:
 `Hand is Two Pairs.`
 
