@@ -70,39 +70,39 @@ class RankHand(object):
         rank = None
 
         if self.__hand.royal_flush:
-            logger.info(' Hand is Royal Flush.')
+            print('Hand is Royal Flush.')
             rank = 1
         elif self.__hand.straight_flush:
-            logger.info(' Hand is Straight Flush.')
+            print('Hand is Straight Flush.')
             rank = 2
         elif self.__hand.four_of_a_kind:
-            logger.info(' Hand is Four of a Kind.')
+            print('Hand is Four of a Kind.')
             rank = 3
         elif self.__hand.full_house:
-            logger.info(' Hand is Full House.')
+            print('Hand is Full House.')
             rank = 4
         elif self.__hand.flush:
-            logger.info(' Hand is Flush.')
+            print('Hand is Flush.')
             rank = 5
         elif self.__hand.straight:
-            logger.info(' Hand is Straight.')
+            print('Hand is Straight.')
             rank = 6
         elif self.__hand.three_of_a_kind:
-            logger.info(' Hand is Three of a Kind.')
+            print('Hand is Three of a Kind.')
             rank = 7
         elif self.__hand.two_pairs:
-            logger.info(' Hand is Two Pairs.')
+            print('Hand is Two Pairs.')
             rank = 8
         elif self.__hand.two_of_a_kind:
-            logger.info(' Hand is Pair')
+            print('Hand is Pair')
             rank = 9
         elif self.__hand.highCard:
-            logger.info(' Hand is High Card.')
+            print('Hand is High Card.')
             rank = 10
 
         if rank:
-            logger.info(' Rank of hand is %s.' % str(rank))
-            logger.info(' Hand: %s' % self.__hand.str)
+            print('Rank of hand is %s.' % str(rank))
+            print('Hand: %s' % self.__hand.str)
             return rank
         else:
             raise CantRank('Can NOT rank hand: "%s"' % self.__hand.str)
@@ -869,119 +869,9 @@ def main():
     setup_logger(logFile=LOG, logLevel='DEBUG')
 
     # UNCOMMENT TO ALLOW COMMAND LINE ARGUMENTS
-    # kwargs = get_args()
-    # rankObj = RankHand(**kwargs)
-
-
-    print('1. Royal Flush')
-    kwargs = {'card1': ['K','S'],
-              'card2': ['Q','S'],
-              'card3': ['A','S'],
-              'card4': ['10','S'],
-              'card5': ['J','S']
-              }
-    royalFlush = RankHand(logLevel='INFO', **kwargs)
-    rank = royalFlush.getRank()
-    print('Rank %d\n' % rank)
-
-    print('2. Straight Flush')
-    kwargs = {'card1': ['8','S'],
-              'card2': ['J','S'],
-              'card3': ['7','S'],
-              'card4': ['10','S'],
-              'card5': ['9','S']
-              }
-    straightFlush = RankHand(logLevel='INFO', **kwargs)
-    rank = straightFlush.getRank()
-    print('Rank %d\n' % rank)
-
-    print('3. Four of a Kind')
-    kwargs = {'card1': ['4','C'],
-              'card2': ['4','S'],
-              'card3': ['2','C'],
-              'card4': ['4','D'],
-              'card5': ['4','H']
-              }
-    fourOfAKind = RankHand(logLevel='INFO', **kwargs)
-    rank = fourOfAKind.getRank()
-    print('Rank %d\n' % rank)
-
-    print('4. Full House')
-    kwargs = {'card1': ['2','C'],
-              'card2': ['2','S'],
-              'card3': ['4','C'],
-              'card4': ['4','D'],
-              'card5': ['4','H']
-              }
-    fullHouse = RankHand(logLevel='INFO', **kwargs)
-    rank = fullHouse.getRank()
-    print('Rank %d\n' % rank)
-
-    print('5. Flush')
-    kwargs = {'card1': ['2','C'],
-              'card2': ['7','C'],
-              'card3': ['4','C'],
-              'card4': ['J','C'],
-              'card5': ['5','C']
-              }
-    flush = RankHand(logLevel='INFO', **kwargs)
-    rank = flush.getRank()
-    print('Rank %d\n' % rank)
-
-    print('6. Straight')
-    kwargs = {'card1': ['2','C'],
-              'card2': ['4','S'],
-              'card3': ['3','D'],
-              'card4': ['6','S'],
-              'card5': ['5','C']
-              }
-    straight = RankHand(logLevel='INFO', **kwargs)
-    rank = straight.getRank()
-    print('Rank %d\n' % rank)
-
-    print('7. Three of a Kind')
-    kwargs = {'card1': ['A','C'],
-              'card2': ['5','S'],
-              'card3': ['2','D'],
-              'card4': ['2','S'],
-              'card5': ['2','C']
-              }
-    threeOfAKind = RankHand(logLevel='INFO', **kwargs)
-    rank = threeOfAKind.getRank()
-    print('Rank %d\n' % rank)
-
-    print('8. Two Pairs')
-    kwargs = {'card1': ['A','C'],
-              'card2': ['J','S'],
-              'card3': ['J','C'],
-              'card4': ['K','S'],
-              'card5': ['K','C']
-              }
-    twoPair = RankHand(logLevel='INFO', **kwargs)
-    rank = twoPair.getRank()
-    print('Rank %d\n' % rank)
-
-    print('9. Pair')
-    kwargs = {'card1': ['A','C'],
-              'card2': ['5','S'],
-              'card3': ['J','C'],
-              'card4': ['2','S'],
-              'card5': ['2','C']
-              }
-    pair = RankHand(logLevel='INFO', **kwargs)
-    rank = pair.getRank()
-    print('Rank %d\n' % rank)
-
-    print('10. High Card')
-    kwargs = {'card1': ['A','C'],
-              'card2': ['5','S'],
-              'card3': ['J','C'],
-              'card4': ['K','S'],
-              'card5': ['2','C']
-              }
-    highCard = RankHand(logLevel='INFO', **kwargs)
-    rank = highCard.getRank()
-    print('Rank %d\n' % rank)
+    kwargs = get_args()
+    rankObj = RankHand(**kwargs)
+    rank = rankObj.getRank()
 
 
 if __name__ == "__main__":
