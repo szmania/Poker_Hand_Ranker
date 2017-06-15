@@ -863,7 +863,6 @@ def setup_logger(logFile=LOG, logLevel='DEBUG'):
         logger.setLevel(logLevel)
         logger.debug(' Logging to %s' % logFile)
 
-
 def main():
 
     setup_logger(logFile=LOG, logLevel='DEBUG')
